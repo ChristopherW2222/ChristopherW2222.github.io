@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Countdowns</title>
+  <script>
+    // Countdown function
+    function countdown(targetDate, elementId) {
+      // Set the target date
+      let target = new Date(targetDate);
+
+      // Check if the target day is not Monday (1: Monday, 2: Tuesday, ..., 7: Sunday)
+      if (target.getDay() !== 1) {
+        // Find the next Monday
+        const daysUntilNextMonday = (7 + 1 - target.getDay()) % 7;
+        target.setDate(target.getDate() + daysUntilNextMonday);
+      }
+
+      // Update the countdown every second
+      const countdownInterval = setInterval(() => {
+        // Get the current date and time
+        const now = new Date().getTime();
+
+        // Calculate the time remaining
+        const timeRemaining = target - now;
+
+        // Calculate days, hours, minutes, and seconds
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        // Display the countdown
+        const countdownElement = document.getElementById(elementId);
+        countdownElement.innerHTML = days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds";
+
+        // If the countdown is finished, display a message and reset the countdown
+        if (timeRemaining < 0) {
+          clearInterval(countdownInterval);
+          countdownElement.innerHTML = "Countdown expired!";
+          countdown(targetDate, elementId); // Start a new countdown for the next occurrence
+        }
+      }, 1000); // Update every second
+    }
+  </script>
+</head>
+<body>
+  <h1>Countdowns</h1>
+  <p>Days until anniversary (June 13th): <span id="anniversaryCountdown"></span></p>
+  <p>Days until Larissa's birthday (February 8th): <span id="larissaBirthdayCountdown"></span></p>
+  <p>Days until Chris' birthday (October 17th): <span id="chrisBirthdayCountdown"></span></p>
+  <p>Days until we meet: <span id="meetingCountdown"></span></p>
+  <p>Days until Christmas: <span id="christmasCountdown"></span></p>
+  <p>Days until Halloween: <span id="halloweenCountdown"></span></p>
+
+  <script>
+    // Call the countdown function for each date
+    countdown("June 13, 2023", "anniversaryCountdown");
+    countdown("February 8, 2023", "larissaBirthdayCountdown");
+    countdown("October 17, 2023", "chrisBirthdayCountdown");
+    countdown("December 26, 2023", "meetingCountdown"); // Modify the date to your desired meeting date
+    countdown("December 25, 2023", "christmasCountdown");
+    countdown("October 31, 2023", "halloweenCountdown");
+  </script>
+</body>
+ <a class="page-button" href="larissa.html">History of Us</a>
+      <a class="page-button" href="vactation.html">Trips for us</a>
+      <a class="page-button" href="countdown.html">Countdown</a>                                       
+      <a class="page-button" href="Things.html">Things I love about you Larissa</a>
+</html>
