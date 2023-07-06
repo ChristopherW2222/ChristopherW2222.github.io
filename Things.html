@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Things I Love About You</title>
+  <script>
+    // Function to generate a random reason
+    function generateRandomReason() {
+      const reasons = [
+        "Your cute little yawns.",
+        "When you touch your hair when talking to me.",
+        "You asking to do an activity I introduced you to.",
+        "Your cute photos.",
+        "Your sexy photos.",
+	"Your body.",
+	"How much in common you have with me.",
+	"How I can open up to you knowing you won't judge me.",
+	"How we hold similar desires yk what i mean.",
+	"You know how to cheer me up.",
+	"Your loyalty to me.",
+	"Your beautiful dark black hair.",
+	"How funny you are.",
+	"How you can speak many languages.",
+	"That you go to church and believe in God.",
+	"That you wish me good night every night (if we ever ended up sad at night idk how and if you just reply to me with on word only and a plain goodnight, I don't think I could ever go to sleep, my heart would be dying.",
+	"That you're really influcencial over me if I ever make you sad I could never forgive myself, my heart would explode if that ever happen.",
+	"How you love international relations/current events on the news.",
+	"How I can explain to you a geopoltical crisis and you'll listen to me and not be bored.",
+	"You make me weak when you wear glasses.",
+        "Your understanding that I'm a guy, so I struggle with guy stuff.",
+        "Your smile (whenever I see you smile, I end up smiling).",
+        "How you like to give gifts.",
+        "Your feelings for me.",
+        "How much time you spend on me.",
+        "That you actually care about me and my health (wear sunscreen and worried about the air quality because of the Canadian fire).",
+        "Willingness to learn Spanish.",
+        "Being my sexy Portuguese language professor.",
+        "When you tease me.",
+        "That you told your parents about me.",
+        "How you hate California.",
+	"Your Brazilian.",
+	"Your going to be the mother of my kids.",
+	"How you mean the world to me.",
+        "You want cuddles.",
+        "You find me attractive.",
+        "You send me little surprises (can't wait for more).",
+        "How much you trust me.",
+        "How open you are to me.",
+	"Not afraid to have a debate with me.",
+        "That you are my best friend."
+      ];
+      const randomIndex = Math.floor(Math.random() * reasons.length);
+      return reasons[randomIndex];
+    }
+    
+    // Function to handle the button click event
+    function handleClick() {
+      const outputElement = document.getElementById("output");
+      outputElement.innerText = generateRandomReason();
+    }
+  </script>
+</head>
+<body>
+  <h1>Things I Love About You</h1>
+  <button onclick="handleClick()">I Love You</button>
+  <p id="output"></p>
+</body>
+   <div>
+      <a class="page-button" href="larissa.html">History of Us</a>
+      <a class="page-button" href="vactation.html">Trips for us</a>
+      <a class="page-button" href="countdown.html">Countdown</a>                                       
+      <a class="page-button" href="Things.html">Things I love about you Larissa</a>
+    </div>
+</html>
