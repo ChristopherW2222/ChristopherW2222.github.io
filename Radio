@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Radio Buttons Example</title>
+</head>
+<body>
+  <h3>Time: Morning</h3>
+  <label>
+    <input type="radio" name="morning_time" value="kitchen"> Indoor: Kitchen
+  </label><br>
+  <label>
+    <input type="radio" name="morning_time" value="bedroom"> Indoor: Bedroom
+  </label><br>
+  <label>
+    <input type="radio" name="morning_time" value="living_room"> Indoor: Living Room
+  </label><br>
+  <label>
+    <input type="radio" name="morning_time" value="formal"> Outdoor: Formal
+  </label><br>
+  <label>
+    <input type="radio" name="morning_time" value="casual"> Outdoor: Casual
+  </label><br><br>
+
+  <h3>Time: Afternoon</h3>
+  <label>
+    <input type="radio" name="afternoon_time" value="kitchen"> Indoor: Kitchen
+  </label><br>
+  <label>
+    <input type="radio" name="afternoon_time" value="bedroom"> Indoor: Bedroom
+  </label><br>
+  <label>
+    <input type="radio" name="afternoon_time" value="living_room"> Indoor: Living Room
+  </label><br>
+  <label>
+    <input type="radio" name="afternoon_time" value="formal"> Outdoor: Formal
+  </label><br>
+  <label>
+    <input type="radio" name="afternoon_time" value="casual"> Outdoor: Casual
+  </label><br><br>
+
+  <h3>Time: Night</h3>
+  <label>
+    <input type="radio" name="night_time" value="kitchen"> Indoor: Kitchen
+  </label><br>
+  <label>
+    <input type="radio" name="night_time" value="bedroom"> Indoor: Bedroom
+  </label><br>
+  <label>
+    <input type="radio" name="night_time" value="living_room"> Indoor: Living Room
+  </label><br>
+  <label>
+    <input type="radio" name="night_time" value="formal"> Outdoor: Formal
+  </label><br>
+  <label>
+    <input type="radio" name="night_time" value="casual"> Outdoor: Casual
+  </label><br><br>
+</body>
+</html>
