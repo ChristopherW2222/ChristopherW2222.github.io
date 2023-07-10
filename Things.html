@@ -73,4 +73,43 @@
 
 	   
     </div>
+
+ <script>
+    function setVisitCount() {
+      var visitCount = getCookie("visitCount");
+      if (visitCount) {
+        visitCount = parseInt(visitCount) + 1;
+      } else {
+        visitCount = 1;
+      }
+      setCookie("visitCount", visitCount, 365);
+      document.getElementById("visitCount").innerHTML = visitCount;
+    }
+
+    function getCookie(name) {
+      var cookieArr = document.cookie.split("; ");
+      for (var i = 0; i < cookieArr.length; i++) {
+        var cookiePair = cookieArr[i].split("=");
+        if (name === cookiePair[0]) {
+          return decodeURIComponent(cookiePair[1]);
+        }
+      }
+      return null;
+    }
+
+    function setCookie(name, value, days) {
+      var cookieStr = name + "=" + encodeURIComponent(value);
+      if (days) {
+        var expirationDate = new Date();
+        expirationDate.setDate(expirationDate.getDate() + days);
+        cookieStr += "; expires=" + expirationDate.toUTCString();
+      }
+      document.cookie = cookieStr;
+    }
+  </script>
+</head>
+<body onload="setVisitCount()">
+  <h1>Welcome to the Website!</h1>
+  <p>This website has been visited <span id="visitCount"></span> times.</p>
+</body>
 </html>
